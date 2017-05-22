@@ -80,7 +80,7 @@ class SwiftyNSExceptionTests : XCTestCase {
 
         let throwingBlock: () -> OrdinarySwiftClass = {
             throwObjCException(exception)
-            return OrdinarySwiftClass(0xDEADBEEF)
+            return OrdinarySwiftClass(42)
         }
 
         do {
