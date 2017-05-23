@@ -38,6 +38,6 @@ Pod::Spec.new do |s|
 
   s.source = { :git => "https://github.com/broadwaylamb/SwiftyNSException.git", :tag => s.version.to_s }
   
-  s.source_files  = "SwiftyNSException/NSException+Swift.h", "SwiftyNSException/SwiftyNSException.h", "SwiftyNSException/Wrapper.swift"
+  s.source_files  = "SwiftyNSException/NSException+Swift.{h,m}", "SwiftyNSException/SwiftyNSException.h", "SwiftyNSException/Wrapper.swift"
 
 end

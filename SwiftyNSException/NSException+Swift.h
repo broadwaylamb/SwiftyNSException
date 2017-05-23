@@ -8,20 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-typedef _Nonnull id(^_ThrowingBlock)(void);
-
 /**
- * Executes the block and returns whether its result or, if an exception
- * has been thrown, the `NSException` object.
+ * Executes the block and returns whether its result if no exceptions
+ * have been thrown.
  *
- * @param block A block that can throw an exception.
- * @return      The result of executing the provided `block`.
+ * @param block  A block that can throw an exception.
+ * @param caught The pointer to an exception if it has been thrown.
+ *               Otherwise `nil`.
+ * @return       The result of executing the provided `block`.
  */
-NS_INLINE id _Nonnull _tryBlock(_ThrowingBlock _Nonnull block) {
-    @try {
-        return block();
-    }
-    @catch (NSException *exception) {
-        return exception;
-    }
-}
+id _Nonnull _tryBlock(_Nonnull id(^ _Nonnull block)(void),
+                                NSException * _Nullable * _Nullable caught);

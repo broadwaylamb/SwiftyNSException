@@ -11,7 +11,7 @@ import SwiftyNSException
 
 class SwiftyNSExceptionTests : XCTestCase {
 
-    func makeException() -> NSException {
+    var exception: NSException {
         return NSException(name: .genericException,
                            reason: "Just an exception, nothing special")
     }
@@ -51,10 +51,8 @@ class SwiftyNSExceptionTests : XCTestCase {
 
     func testCatchNSExceptionInBlockReturningObjCClass() {
 
-        let exception = makeException()
-
         let throwingBlock: () -> NSString = {
-            throwObjCException(exception)
+            self.exception.raise()
             return "Will not actually be returned."
         }
 
@@ -76,10 +74,8 @@ class SwiftyNSExceptionTests : XCTestCase {
 
     func testCatchNSExceptionInBlockReturningSwiftClass() {
 
-        let exception = makeException()
-
         let throwingBlock: () -> OrdinarySwiftClass = {
-            throwObjCException(exception)
+            self.exception.raise()
             return OrdinarySwiftClass(42)
         }
 
@@ -101,10 +97,8 @@ class SwiftyNSExceptionTests : XCTestCase {
 
     func testCatchNSExceptionInBlockReturningSwiftEnum() {
 
-        let exception = makeException()
-
         let throwingBlock: () -> OrdinarySwiftEnum = {
-            throwObjCException(exception)
+            self.exception.raise()
             return .complexCase(nil)
         }
 
@@ -180,6 +174,46 @@ class SwiftyNSExceptionTests : XCTestCase {
 
         } catch {
             
+            XCTFail("Must not throw")
+        }
+    }
+
+    func testGetResultOfBlockReturningOptionalResult() {
+
+        let expected: Int? = nil
+
+        let nonthrowingBlock: () -> Int? = {
+            return expected
+        }
+
+        do {
+
+            let returned = try handle(nonthrowingBlock)
+
+            XCTAssertEqual(returned, expected)
+
+        } catch {
+
+            XCTFail("Must not throw")
+        }
+    }
+
+    func testGetResultOfNonthrowingBlockReturningNSException() {
+
+        let expected = exception
+
+        let nonthrowingBlock: () -> NSException = {
+            return expected
+        }
+
+        do {
+
+            let returned = try handle(nonthrowingBlock)
+
+            XCTAssertEqual(returned, expected)
+
+        } catch {
+
             XCTFail("Must not throw")
         }
     }

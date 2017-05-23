@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87067EC71ED4CDE6001F0A54 /* NSException+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 87067EC61ED4CDE6001F0A54 /* NSException+Swift.m */; };
+		87067EC81ED4CDE6001F0A54 /* NSException+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 87067EC61ED4CDE6001F0A54 /* NSException+Swift.m */; };
+		87067EC91ED4CDE6001F0A54 /* NSException+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 87067EC61ED4CDE6001F0A54 /* NSException+Swift.m */; };
+		87067ECA1ED4CDE6001F0A54 /* NSException+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 87067EC61ED4CDE6001F0A54 /* NSException+Swift.m */; };
 		879B8CDC1ED33BF30011531A /* SwiftyNSExceptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B8CDB1ED33BF30011531A /* SwiftyNSExceptionTests.swift */; };
 		879B8CEC1ED347440011531A /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F74B141ED3347F00A49145 /* Wrapper.swift */; };
 		879B8CED1ED347700011531A /* SwiftyNSException.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F74AF91ED3345B00A49145 /* SwiftyNSException.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,8 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87067EC61ED4CDE6001F0A54 /* NSException+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+Swift.m"; sourceTree = "<group>"; };
 		879B8CDB1ED33BF30011531A /* SwiftyNSExceptionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyNSExceptionTests.swift; sourceTree = "<group>"; };
-		879B8CDE1ED33C840011531A /* SwiftyNSException-Tests-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftyNSException-Tests-BridgingHeader.h"; sourceTree = "<group>"; };
 		879B8CE41ED346BF0011531A /* SwiftyNSException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyNSException.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879B8CF31ED349160011531A /* SwiftyNSExceptionTests_macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyNSExceptionTests_macOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		879B8D071ED34C3F0011531A /* SwiftyNSException.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyNSException.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +156,7 @@
 			children = (
 				87F74AF91ED3345B00A49145 /* SwiftyNSException.h */,
 				87F74B101ED3346C00A49145 /* NSException+Swift.h */,
+				87067EC61ED4CDE6001F0A54 /* NSException+Swift.m */,
 				87F74B141ED3347F00A49145 /* Wrapper.swift */,
 				87F74AFA1ED3345B00A49145 /* Info.plist */,
 			);
@@ -162,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				87F74B061ED3345B00A49145 /* Info.plist */,
-				879B8CDE1ED33C840011531A /* SwiftyNSException-Tests-BridgingHeader.h */,
 				879B8CDB1ED33BF30011531A /* SwiftyNSExceptionTests.swift */,
 			);
 			path = SwiftyNSExceptionTests;
@@ -348,6 +352,7 @@
 				TargetAttributes = {
 					879B8CE31ED346BF0011531A = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					879B8CF21ED349160011531A = {
@@ -356,10 +361,12 @@
 					};
 					879B8D061ED34C3F0011531A = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					879B8D161ED34E6F0011531A = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					879B8D251ED34F0D0011531A = {
@@ -459,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87067EC81ED4CDE6001F0A54 /* NSException+Swift.m in Sources */,
 				879B8CEC1ED347440011531A /* Wrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87067EC91ED4CDE6001F0A54 /* NSException+Swift.m in Sources */,
 				879B8D0F1ED34C500011531A /* Wrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87067ECA1ED4CDE6001F0A54 /* NSException+Swift.m in Sources */,
 				879B8D1F1ED34ED90011531A /* Wrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87067EC71ED4CDE6001F0A54 /* NSException+Swift.m in Sources */,
 				87F74B151ED3347F00A49145 /* Wrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +546,7 @@
 		879B8CEA1ED346BF0011531A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -547,6 +559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -556,6 +569,7 @@
 		879B8CEB1ED346BF0011531A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -584,7 +598,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)Tests/$(PROJECT_NAME)-Tests-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -599,7 +612,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)Tests/$(PROJECT_NAME)-Tests-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -608,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -618,6 +631,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -629,6 +643,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -649,6 +664,7 @@
 		879B8D1D1ED34E6F0011531A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -659,6 +675,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -669,6 +686,7 @@
 		879B8D1E1ED34E6F0011531A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -693,7 +711,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = SwiftyNSExceptionTests_macOS;
 				SDKROOT = appletvos;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)Tests/$(PROJECT_NAME)-Tests-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
@@ -706,7 +723,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = SwiftyNSExceptionTests_macOS;
 				SDKROOT = appletvos;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)Tests/$(PROJECT_NAME)-Tests-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
@@ -820,6 +836,7 @@
 		87F74B0B1ED3345B00A49145 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -839,6 +856,7 @@
 		87F74B0C1ED3345B00A49145 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -863,7 +881,6 @@
 				INFOPLIST_FILE = "$(PROJECT_NAME)Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)Tests/$(PROJECT_NAME)-Tests-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -877,7 +894,6 @@
 				INFOPLIST_FILE = "$(PROJECT_NAME)Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_NAME)Tests/$(PROJECT_NAME)-Tests-BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -892,6 +908,7 @@
 				879B8CEB1ED346BF0011531A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879B8CFB1ED349160011531A /* Build configuration list for PBXNativeTarget "SwiftyNSExceptionTests_macOS" */ = {
 			isa = XCConfigurationList;
@@ -900,6 +917,7 @@
 				879B8CFD1ED349160011531A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879B8D0C1ED34C3F0011531A /* Build configuration list for PBXNativeTarget "SwiftyNSException_watchOS" */ = {
 			isa = XCConfigurationList;
@@ -908,6 +926,7 @@
 				879B8D0E1ED34C3F0011531A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879B8D1C1ED34E6F0011531A /* Build configuration list for PBXNativeTarget "SwiftyNSException_tvOS" */ = {
 			isa = XCConfigurationList;
@@ -916,6 +935,7 @@
 				879B8D1E1ED34E6F0011531A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		879B8D2E1ED34F0D0011531A /* Build configuration list for PBXNativeTarget "SwiftyNSExceptionTests_tvOS" */ = {
 			isa = XCConfigurationList;
@@ -924,6 +944,7 @@
 				879B8D301ED34F0D0011531A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87F74AF01ED3345B00A49145 /* Build configuration list for PBXProject "SwiftyNSException" */ = {
 			isa = XCConfigurationList;
