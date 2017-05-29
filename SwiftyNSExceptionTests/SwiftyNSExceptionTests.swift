@@ -49,6 +49,10 @@ class SwiftyNSExceptionTests : XCTestCase {
         }
     }
 
+    enum TrivialError : Error {
+        case wat
+    }
+
     func testCatchNSExceptionInBlockReturningObjCClass() {
 
         let throwingBlock: () -> NSString = {
@@ -215,6 +219,28 @@ class SwiftyNSExceptionTests : XCTestCase {
         } catch {
 
             XCTFail("Must not throw")
+        }
+    }
+
+    func testCatchErrorInBlockThrowingSwiftError() {
+
+        let throwingBlock: () throws -> Int = {
+            throw TrivialError.wat
+        }
+
+        do {
+
+            _ = try handle(throwingBlock)
+
+            XCTFail("Must never reach this point")
+
+        } catch let caught as TrivialError {
+
+            XCTAssertEqual(caught, .wat)
+
+        } catch {
+            
+            XCTFail("Must throw a TrivialError")
         }
     }
 }

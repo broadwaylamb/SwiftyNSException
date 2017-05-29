@@ -8,14 +8,26 @@
 
 extension NSException : Error {}
 
-private func _handle(_ throwingBlock: @escaping () -> Any) throws -> Any {
+private func _handle(_ throwingBlock: @escaping () throws -> Any) throws -> Any {
 
-    var caught: NSException?
+    var exception: NSException?
+    var error: Error?
 
-    let result = _tryBlock(throwingBlock, &caught)
+    let result = _tryBlock({ () -> Any? in
+        do {
+            return try throwingBlock()
+        } catch let _error {
+            error = _error
+            return nil
+        }
+    }, &exception)
 
-    if let caught = caught {
-        throw caught
+    if let error = error {
+        throw error
+    }
+
+    if let exception = exception {
+        throw exception
     }
 
     return result
@@ -31,7 +43,7 @@ private func _handle(_ throwingBlock: @escaping () -> Any) throws -> Any {
 ///
 /// - Returns: The result of calling `throwingBlock` assuming
 ///            no exceptions were thrown.
-public func handle<T>(_ throwingBlock: @escaping () -> T) throws -> T {
+public func handle<T>(_ throwingBlock: @escaping () throws -> T) throws -> T {
     return try _handle(throwingBlock) as! T
 }
 
@@ -45,6 +57,6 @@ public func handle<T>(_ throwingBlock: @escaping () -> T) throws -> T {
 ///
 /// - Returns: The result of calling `throwingBlock` assuming
 ///            no exceptions were thrown.
-public func handle<T>(_ throwingBlock: @escaping () -> T?) throws -> T? {
+public func handle<T>(_ throwingBlock: @escaping () throws -> T?) throws -> T? {
     return try _handle(throwingBlock) as? T
 }
