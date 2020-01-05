@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/broadwaylamb/SwiftyNSException.svg?branch=master)](https://travis-ci.org/broadwaylamb/SwiftyNSException)
 [![codecov](https://codecov.io/gh/broadwaylamb/SwiftyNSException/branch/master/graph/badge.svg)](https://codecov.io/gh/broadwaylamb/SwiftyNSException)
-![Language](https://img.shields.io/badge/Swift-3.0-orange.svg)
+![Language](https://img.shields.io/badge/Swift-5.0-orange.svg)
 ![Platform](https://img.shields.io/cocoapods/p/SwiftyNSException.svg?style=flat)
 ![Cocoapods](https://img.shields.io/cocoapods/v/SwiftyNSException.svg?style=flat)
 
@@ -11,7 +11,7 @@ catches an Objective-C exception and rethrows it in Swift so you can catch it us
 
 ## Requirements
 
-* Swift 3
+* Swift 5
 * iOS 8.0+
 * macOS 10.9+
 * tvOS 9.0+
@@ -48,12 +48,12 @@ import SwiftyNSException
 do {
 
     let result = try handle { () -> String in
-        
+
         // Some invocation that can throw an NSException
-        
+
         return "OK"
     }
-    
+
     // The type of `result` is `String`.
 
 } catch let exception as NSException {
@@ -63,6 +63,6 @@ do {
 } catch {
 
     // Handle some other error thrown.
-    
+
 }
 ```
