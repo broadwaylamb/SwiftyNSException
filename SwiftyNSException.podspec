@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name = "SwiftyNSException"
-  s.version = "1.0.0"
+  s.version = "2.0.0"
+  s.swift_versions = "5.0"
   s.summary = "A tiny library that lets you catch Objective-C NSExceptions right in your Swift code."
 
   s.description = <<-DESC
