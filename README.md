@@ -34,7 +34,7 @@ For the latest dev build:
 ```ruby
 use_frameworks!
 
-pod 'SwiftyHaru', :git => 'https://github.com/broadwaylamb/SwiftyNSException.git', :branch => 'master'
+pod 'SwiftyNSException', :git => 'https://github.com/broadwaylamb/SwiftyNSException.git', :branch => 'master'
 ```
 
 ## Usage
