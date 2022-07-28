@@ -8,7 +8,7 @@
 
 extension NSException : Error {}
 
-private func _handle(_ throwingBlock: @escaping () throws -> Any) throws -> Any {
+private func _handle(_ throwingBlock: () throws -> Any) throws -> Any {
 
     var exception: NSException?
     var error: Error?
@@ -43,7 +43,7 @@ private func _handle(_ throwingBlock: @escaping () throws -> Any) throws -> Any 
 ///
 /// - Returns: The result of calling `throwingBlock` assuming
 ///            no exceptions were thrown.
-public func handle<T>(_ throwingBlock: @escaping () throws -> T) throws -> T {
+public func handle<T>(_ throwingBlock: () throws -> T) throws -> T {
     return try _handle(throwingBlock) as! T
 }
 
@@ -57,6 +57,6 @@ public func handle<T>(_ throwingBlock: @escaping () throws -> T) throws -> T {
 ///
 /// - Returns: The result of calling `throwingBlock` assuming
 ///            no exceptions were thrown.
-public func handle<T>(_ throwingBlock: @escaping () throws -> T?) throws -> T? {
+public func handle<T>(_ throwingBlock: () throws -> T?) throws -> T? {
     return try _handle(throwingBlock) as? T
 }

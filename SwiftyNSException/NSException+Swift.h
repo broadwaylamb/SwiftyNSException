@@ -17,5 +17,5 @@
  *               Otherwise `nil`.
  * @return       The result of executing the provided `block`.
  */
-id _Nonnull _tryBlock(_Nonnull id(^ _Nonnull block)(void),
+id _Nonnull _tryBlock(_Nonnull __attribute__((noescape)) id(^ _Nonnull block)(void),
                                 NSException * _Nullable * _Nullable caught);
